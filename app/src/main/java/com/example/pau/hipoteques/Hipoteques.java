@@ -73,7 +73,7 @@ public class Hipoteques extends AppCompatActivity {
     }
 
     private void Mostrar(double quotaMensual, double todasLasQuotas) {
-        DecimalFormat dc = new DecimalFormat("#0.00");
+        DecimalFormat dc = new DecimalFormat("#0.000");
         mes.setText("MES:"+dc.format(quotaMensual));
         total.setText("TOTAL:"+dc.format(todasLasQuotas));
     }
