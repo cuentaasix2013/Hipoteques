@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Hipoteques"
+    android:id="@+id/R1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preu Inmoble €"
+        android:id="@+id/tV1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Preu"
+        android:layout_alignBottom="@+id/tV1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estalvis"
+        android:id="@+id/tV2"
+        android:layout_below="@+id/tV1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Estalvis"
+        android:layout_alignBottom="@+id/tV2"
+        android:layout_alignLeft="@+id/Preu"
+        android:layout_alignStart="@+id/Preu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plaç (anys)"
+        android:id="@+id/tV3"
+        android:layout_below="@+id/tV2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Plas"
+        android:layout_alignBottom="@+id/tV3"
+        android:layout_alignLeft="@+id/Estalvis"
+        android:layout_alignStart="@+id/Estalvis" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Euribor"
+        android:id="@+id/tV4"
+        android:layout_below="@+id/tV3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Euribor"
+        android:layout_alignBottom="@+id/tV4"
+        android:layout_alignLeft="@+id/Plas"
+        android:layout_alignStart="@+id/Plas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diferencial"
+        android:id="@+id/tV5"
+        android:layout_below="@+id/tV4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Diferencial"
+        android:layout_alignBottom="@+id/tV5"
+        android:layout_alignLeft="@+id/Euribor"
+        android:layout_alignStart="@+id/Euribor" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        android:id="@+id/btn"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/Diferencial"
+        android:layout_alignStart="@+id/Diferencial"
+        android:onClick="Calcular" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="34dp"
+        android:id="@+id/R2"
+        android:layout_below="@+id/btn"
+        android:layout_alignRight="@+id/Diferencial"
+        android:layout_alignEnd="@+id/Diferencial"
+        android:background="#0099FF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MES:0"
+            android:id="@+id/mes"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:maxLength="14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL:0"
+            android:id="@+id/total"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:maxLength="16"
+            android:nestedScrollingEnabled="false" />
+    </RelativeLayout>
+
+</RelativeLayout>
